@@ -9,9 +9,10 @@ def gramatica1(cadena):
 
     return cadena == cadena[::-1]
 
-entrada = input("Ingrese la cadena: ").strip()
-
-if gramatica1(entrada):
-    print("acepta")
-else:
-    print("no a acepta")    
+with open("G1.txt", "r") as archivo:
+    for linea in archivo:
+        cadena = linea.strip() 
+        if gramatica1(cadena):
+            print(f"{cadena}: acepta")
+        else:
+            print(f"{cadena}: No acepta")
