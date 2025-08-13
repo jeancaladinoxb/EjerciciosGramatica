@@ -20,10 +20,10 @@ def gramatica2(cadena):
     # Verificar que num_b = num_a + 1
     return num_b == num_a + 1
 
-# Programa principal
-entrada = input("Ingresa la cadena: ").strip()
-
-if gramatica2(entrada):
-    print("acepta")
-else:
-    print("NO acepta")
+with open("G2.txt", "r") as archivo:
+    for linea in archivo:
+        cadena = linea.strip() 
+        if gramatica2(cadena):
+            print(f"{cadena}: acepta")
+        else:
+            print(f"{cadena}: No acepta")
