@@ -10,4 +10,6 @@
 
 - Ejercicio 5: Para finalizar esta regla consiste en que la cadena debe iniciar con la letra "a" luego se repite ab n veces posibles en donde puede ser 0,1,2,3,4 o las veces que se desee, en este caso no se puede usar a ya que faltaría la letra "a", abb ya que no sigue el patrón  y aba porque no finaliza con la letra "b". Se puede observa el funcionamiento de la regla a través del archivo text G5.
 
+Todos los archivos de prueba tienen el formato txt
+
 
