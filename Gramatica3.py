@@ -13,10 +13,11 @@ def Gramatica3(cadena):
     # Condición: num_b = num_a + 1 y al menos 1 'a'
     return num_a > 0 and num_b == num_a + 1
 
-# Programa principal
-entrada = input("Ingresa la cadena: ").strip()
 
-if Gramatica3(entrada):
-    print("acepta")
-else:
-    print("NO acepta")
+with open("G3.txt","r") as archivo:
+    for linea in archivo:
+        cadena=linea.strip()
+        if Gramatica3(cadena):
+            print(f"{cadena}: acepta")
+        else:
+            print(f"{cadena}: No acepta")   

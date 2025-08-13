@@ -23,14 +23,17 @@ int Gramatica3(char *cadena) {
 }
 
 int main() {
+    FILE*archivo;
     char cadena[100];
-    printf("Ingresa la cadena: ");
-    scanf("%s", cadena);
-
-    if (Gramatica3(cadena))
-        printf("acepta\n");
-    else
-        printf("NO acepta\n");
-
-    return 0;
+    archivo = fopen("G3.txt","r");
+    if (archivo ==NULL){
+        printf("No se pudo abrir el archivo.\n");
+        return 1;
+    }
+    while (fscanf(archivo, "%s", cadena) != EOF) {
+        if (Gramatica3(cadena))
+            printf("%s: Acepta\n", cadena);
+        else
+            printf("%s: No acepta\n", cadena);
+    }
 }
